@@ -18,7 +18,7 @@ if (time >= 0 && time < 12) {
 }
 
 ReactDOM.render(
-  <h1 style={color}>Good {timeOfDay}</h1>,
+  <h1 style={customStyle}>Good {timeOfDay}</h1>,
   document.getElementById("root")
 );
 
