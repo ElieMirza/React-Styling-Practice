@@ -4,17 +4,17 @@ import ReactDOM from "react-dom";
 const time = new Date().getHours();
 
 let timeOfDay = "day";
-let color = { color: "red" };
+let customStyle = { color: "" };
 
 if (time >= 0 && time < 12) {
   timeOfDay = "morning";
-  color = { color: "red" };
+  customStyle.color = "red";
 } else if (time >= 12 && time <= 18) {
   timeOfDay = "afternoon";
-  color = { color: "green" };
+  customStyle.color = "green";
 } else {
   timeOfDay = "evening";
-  color = { color: "blue" };
+  customStyle.color = "blue";
 }
 
 ReactDOM.render(
