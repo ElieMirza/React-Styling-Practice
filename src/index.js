@@ -4,16 +4,23 @@ import ReactDOM from "react-dom";
 const time = new Date().getHours();
 
 let timeOfDay = "day";
+let color = { color: "red" };
 
-if (time >= 12 && time <= 18) {
-  timeOfDay = "afternoon";
-} else if (time >= 0 && time < 12) {
+if (time >= 0 && time < 12) {
   timeOfDay = "morning";
+  color = { color: "red" };
+} else if (time >= 12 && time <= 18) {
+  timeOfDay = "afternoon";
+  color = { color: "green" };
 } else {
   timeOfDay = "evening";
+  color = { color: "blue" };
 }
 
-ReactDOM.render(<h1>Good {timeOfDay}</h1>, document.getElementById("root"));
+ReactDOM.render(
+  <h1 style={color}>Good {timeOfDay}</h1>,
+  document.getElementById("root")
+);
 
 //Create a React app from scratch.
 //Show a single h1 that says "Good morning" if between midnight and 12PM.
